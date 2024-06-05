@@ -37,6 +37,16 @@ export default [
     external: ['react', 'react-dom'],
   },
   {
+    input: 'src/Button.css',
+    output: [{ file: 'dist/button.min.css' }],
+    plugins: [
+      postcss({
+        extract: true,
+        minimize: true,
+      }),
+    ],
+  },
+  {
     input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'es' }],
     plugins: [dts.default()],
