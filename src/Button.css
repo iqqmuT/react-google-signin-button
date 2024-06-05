@@ -3,7 +3,7 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   -webkit-appearance: none;
-  background-color: WHITE;
+  background-color: white;
   background-image: none;
   border: 1px solid #747775;
   border-radius: 4px;
@@ -27,11 +27,40 @@
   min-width: min-content;
 }
 
+/* Dark theme */
+.gsibtn-dark {
+  background-color: #131314;
+  color: #e3e3e3;
+  border-color: #8e918f;
+}
+
+/* Neutral theme */
+.gsibtn-neutral {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.gsibtn-pill {
+  border-radius: 20px;
+}
+
+/* Icon only, no text */
+.gsibtn-notext {
+  padding: 0;
+  width: 40px;
+}
+
 .gsibtn .gsibtn-icon {
   height: 20px;
   margin-right: 12px;
   min-width: 20px;
   width: 20px;
+  box-sizing: content-box;
+}
+
+.gsibtn-notext .gsibtn-icon {
+  margin: 0;
+  padding: 9px;
 }
 
 .gsibtn .gsibtn-content-wrapper {
@@ -45,7 +74,11 @@
   width: 100%;
 }
 
-.gsibtn .gsi-material-button-contents {
+.gsibtn-logo-center .gsibtn-content-wrapper {
+  justify-content: center;
+}
+
+.gsibtn .gsibtn-contents {
   flex-grow: 1;
   font-family: 'Roboto', arial, sans-serif;
   font-weight: 500;
@@ -54,11 +87,7 @@
   vertical-align: top;
 }
 
-.gsibtn.gsibtn-logo-centered .gsibtn-content-wrapper {
-  justify-content: center;
-}
-
-.gsibtn.gsibtn-logo-centered .gsibtn-contents {
+.gsibtn-logo-center .gsibtn-contents {
   flex-grow: 0;
 }
 
@@ -78,6 +107,23 @@
   border-color: #1f1f1f1f;
 }
 
+.gsibtn-neutral:disabled {
+  border-color: none;
+}
+
+.gsibtn-dark:disabled {
+  background-color: #13131461;
+  border-color: #8e918f1f;
+}
+
+.gsibtn-neutral:disable .gsibtn-state {
+  background-color: #1f1f1f1f;
+}
+
+.gsibtn-dark:disabled .gsibtn-state {
+  background-color: #e3e3e31f;
+}
+
 .gsibtn:disabled .gsibtn-contents {
   opacity: 38%;
 }
@@ -92,6 +138,16 @@
   opacity: 12%;
 }
 
+.gsibtn-neutral:not(:disabled):active .gsibtn-state,
+.gsibtn-neutral:not(:disabled):focus .gsibtn-state {
+  background-color: #001d35;
+}
+
+.gsibtn-dark:not(:disabled):active .gsibtn-state,
+.gsibtn-dark:not(:disabled):focus .gsibtn-state {
+  background-color: white;
+}
+
 .gsibtn:not(:disabled):hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
@@ -99,6 +155,14 @@
 .gsibtn:not(:disabled):hover .gsibtn-state {
   background-color: #303030;
   opacity: 8%;
+}
+
+.gsibtn-neutral:not(:disabled):hover .gsibtn-state {
+  background-color: #001d35;
+}
+
+.gsibtn-dark:not(:disabled):hover .gsibtn-state {
+  background-color: white;
 }
 
 .gsibtn-d-none {
