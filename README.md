@@ -2,7 +2,7 @@
 
 ![Preview Image](docs/sign-in-with-google.png)
 
-"Sign in with Google" button for React. Follows [official guidelines](https://developers.google.com/identity/branding-guidelines). Note that this is only a button which offers you `onClick`, you have to implement the authentication.
+"Sign in with Google" button for React. Follows [official guidelines](https://developers.google.com/identity/branding-guidelines). Note that this module does not provide authentication itself, only a button.
 
 ## Installation
 
@@ -28,6 +28,12 @@ function App() {
   );
 }
 ```
+
+**Why styles are in external CSS file and not as inline styles?**
+
+You are able to make small adjustments by your own CSS.
+It was also easier to use `:active` and `:focus` pseudo-classes
+with CSS without adding dependencies.
 
 ## Props
 
