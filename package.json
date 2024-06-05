@@ -22,7 +22,11 @@
     "url": "git+https://github.com/iqqmuT/react-google-signin-button.git"
   },
   "keywords": [
-    "google"
+    "react",
+    "google",
+    "button",
+    "authentication",
+    "sign-in"
   ],
   "author": "Tuomas Jaakola",
   "license": "MIT",

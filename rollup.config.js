@@ -38,11 +38,10 @@ export default [
   },
   {
     input: 'src/Button.css',
-    output: [{ file: 'dist/button.min.css' }],
+    output: [{ file: 'dist/button.css' }],
     plugins: [
       postcss({
         extract: true,
-        minimize: true,
       }),
     ],
   },
