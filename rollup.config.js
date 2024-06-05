@@ -29,7 +29,10 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       terser(),
-      postcss(),
+      postcss({
+        extract: true,
+        minimize: true,
+      }),
     ],
     external: ['react', 'react-dom'],
   },
