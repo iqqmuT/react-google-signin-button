@@ -41,7 +41,7 @@ be used with inline styles without adding NPM dependencies.
 | ---- | ---- | ------------- | ----------- |
 | `label` | string | `Sign in with Google` | Text in the button. Use empty string when you want to display the logo only. See recommended values from [Google documentation](https://developers.google.com/identity/branding-guidelines). |
 | `theme` | string | `light` | `light`, `dark` or `neutral` |
-| `shape` | string | `rectangular` | `rectangular`, `pill`, `square` or `circle` |
+| `shape` | string | `rectangular` | `rectangular`, `pill`, `square` or `circle`. Use `square` or `circle` when you want the logo only. |
 | `width` | string | `undefined` | Button width, for example `300px` |
 | `logoAlign` | string | `left` | When using `width`, the logo can be aligned with this. `left` or `center` |
 
