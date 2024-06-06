@@ -29,11 +29,11 @@ function App() {
 }
 ```
 
-**Why styles are in external CSS file and not as inline styles?**
+**Why are the styles in external CSS file and not as inline styles?**
 
-You are able to make small adjustments by your own CSS.
-It was also easier to use `:active` and `:focus` pseudo-classes
-with CSS without adding dependencies.
+Using an external CSS file allows you to make small adjustments by
+adding your own CSS. Pseudo-classes `:active` and `:focus` cannot
+be used with inline styles without adding NPM dependencies.
 
 ## Props
 
