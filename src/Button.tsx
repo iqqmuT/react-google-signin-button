@@ -13,6 +13,9 @@ const Button: React.FC<ButtonProps> = (props) => {
     ...otherProps
   } = props;
 
+  const showLabel =
+    label.length > 0 && shape !== 'circle' && shape !== 'square';
+
   const getClasses = () => {
     const classes = ['gsibtn'];
     if (theme === 'dark') {
@@ -26,7 +29,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     if (shape === 'pill' || shape === 'circle') {
       classes.push('gsibtn-pill');
     }
-    if (label.length === 0) {
+    if (!showLabel) {
       classes.push('gsibtn-notext');
     }
     return classes.join(' ');
@@ -35,19 +38,13 @@ const Button: React.FC<ButtonProps> = (props) => {
   const buttonStyle: React.CSSProperties = { width };
 
   return (
-    <button
-      className={getClasses()}
-      style={buttonStyle}
-      {...otherProps}
-    >
+    <button className={getClasses()} style={buttonStyle} {...otherProps}>
       <div className="gsibtn-state" />
       <div className="gsibtn-content-wrapper">
         <div className="gsibtn-icon">
           <Icon />
         </div>
-        {label.length > 0 && (
-          <span className="gsibtn-contents">{label}</span>
-        )}
+        {showLabel && <span className="gsibtn-contents">{label}</span>}
         <span className="gsibtn-d-none">{label}</span>
       </div>
     </button>
