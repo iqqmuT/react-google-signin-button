@@ -10,6 +10,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     shape = 'rectangular',
     width,
     logoAlign,
+    className,
     ...otherProps
   } = props;
 
@@ -31,6 +32,9 @@ const Button: React.FC<ButtonProps> = (props) => {
     }
     if (!showLabel) {
       classes.push('gsibtn-notext');
+    }
+    if (className) {
+      classes.push(className);
     }
     return classes.join(' ');
   }
