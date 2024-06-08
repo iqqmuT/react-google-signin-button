@@ -2,7 +2,7 @@
 
 ![Preview Image](docs/sign-in-with-google.png)
 
-"Sign in with Google" button for React. Follows [official guidelines](https://developers.google.com/identity/branding-guidelines). Note that this module does not provide authentication itself, only a button.
+"Sign in with Google" button for React. Follows [the official guidelines](https://developers.google.com/identity/branding-guidelines). Note that this module does not provide authentication itself; it only offers a button.
 
 ## Installation
 
@@ -39,13 +39,17 @@ be used with inline styles without adding NPM dependencies.
 
 | Name | Type | Default Value | Description |
 | ---- | ---- | ------------- | ----------- |
-| `label` | string | `Sign in with Google` | Text in the button. Use empty string when you want to display the logo only. See recommended values from [Google documentation](https://developers.google.com/identity/branding-guidelines). |
+| `label` | string | `Sign in with Google` | Text in the button. See [Google documentation](https://developers.google.com/identity/branding-guidelines). |
 | `theme` | string | `light` | `light`, `dark` or `neutral` |
 | `shape` | string | `rectangular` | `rectangular`, `pill`, `square` or `circle`. Use `square` or `circle` when you want the logo only. |
-| `width` | string | `undefined` | Button width, for example `300px` |
-| `logoAlign` | string | `left` | When using `width`, the logo can be aligned with this. `left` or `center` |
+| `size` | string | `md` | `lg`, `md`, or `sm` |
+| `logoAlign` | string | `left` | When using custom width, the logo can be aligned with this. `left` or `center` |
 
-Other props are passed to `button` element, for example `onClick` and `disabled`.
+Other props are passed to the `button` element, such as:
+* `onClick`
+* `disabled`
+* `className`
+* `style`
 
 ## Development
 

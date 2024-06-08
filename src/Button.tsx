@@ -8,7 +8,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     label = 'Sign in with Google',
     theme = 'light',
     shape = 'rectangular',
-    width,
+    size,
     logoAlign,
     className,
     ...otherProps
@@ -33,16 +33,17 @@ const Button: React.FC<ButtonProps> = (props) => {
     if (!showLabel) {
       classes.push('gsibtn-notext');
     }
+    if (size && size !== 'md') {
+      classes.push(`gsibtn-${size}`);
+    }
     if (className) {
       classes.push(className);
     }
     return classes.join(' ');
   }
 
-  const buttonStyle: React.CSSProperties = { width };
-
   return (
-    <button className={getClasses()} style={buttonStyle} {...otherProps}>
+    <button className={getClasses()} {...otherProps}>
       <div className="gsibtn-state" />
       <div className="gsibtn-content-wrapper">
         <div className="gsibtn-icon">

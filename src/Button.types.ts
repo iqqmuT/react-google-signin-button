@@ -2,6 +2,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   label?: string;
   theme?: 'light' | 'dark' | 'neutral';
   shape?: 'rectangular' | 'square' | 'pill' | 'circle';
-  width?: string;
+  size?: 'lg' | 'md' | 'sm';
   logoAlign?: 'left' | 'center';
 }
