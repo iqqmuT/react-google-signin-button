@@ -1,6 +1,6 @@
 {
   "name": "react-google-signin-button",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "React component for 'Sign in with Google' button.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
